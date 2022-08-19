@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from MercadoApp import views
+from MercadoApp import AdminViews
+from django.conf.urls.static import static
+from Mercado import settings
+
+from django.urls import include
 
 urlpatterns = [    
-    path('admin/', admin.site.urls),
-    path('demo', views.demoPage),
-    path('demoPage', views.demoPageTemplate)
-]
+        path('admindashboard/',include("MeracdoApp.adminurls"))
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
