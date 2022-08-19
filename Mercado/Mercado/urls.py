@@ -23,5 +23,5 @@ from Mercado import settings
 from django.urls import include
 
 urlpatterns = [    
-        path('admindashboard/',include("MeracdoApp.adminurls"))
+        path('admindashboard/',include("MercadoApp.adminurls"))
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
