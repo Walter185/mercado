@@ -23,6 +23,8 @@ from Mercado import settings
 
 urlpatterns = [
     path('admin/', views.adminLogin,name="admin_login"),
+    
+    path('',views.demoPage),
     path('demo',views.demoPage),
     path('demoPage',views.demoPageTemplate),
     path('admin_login_process',views.adminLoginProcess,name="admin_login_process"),
