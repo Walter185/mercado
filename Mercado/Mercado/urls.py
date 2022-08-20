@@ -19,12 +19,15 @@ from Mercado import settings
 from MercadoApp import views
 from MercadoApp import AdminViews
 from django.conf.urls.static import static
+
 from Mercado import settings
 
 urlpatterns = [    
-    path('admin/', views.adminLogin),
+    path('admin/', views.adminLogin,name="admin_login"),
     path('demo/', views.demoPage),    
     path('demoPage', views.demoPageTemplate),
+    path('admin_login_process', views.adminLoginProcess,name="admin_login_process"),    
+    path('admin_logout_process', views.adminLogoutProcess,name="admin_logout_process"),
 
-    path('admin_home',AdminViews.admin_home)
+    path('admin_home',AdminViews.admin_home,name="admin_home")
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
