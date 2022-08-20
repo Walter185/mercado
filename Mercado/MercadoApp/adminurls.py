@@ -1,4 +1,4 @@
-"""DjangoEcommerce URL Configuration
+""" URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -23,8 +23,6 @@ from Mercado import settings
 
 urlpatterns = [
     path('admin/', views.adminLogin,name="admin_login"),
-    
-    path('',views.demoPage),
     path('demo',views.demoPage),
     path('demoPage',views.demoPageTemplate),
     path('admin_login_process',views.adminLoginProcess,name="admin_login_process"),
